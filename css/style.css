@@ -1,0 +1,402 @@
+/* =====================
+   RESET BÁSICO
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+}
+
+/* =====================
+   ENLACES
+===================== */
+a {
+    color: #d19ada;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+ MENÚ HORIZONTAL 
+===================== */
+.horizontal-menu {
+    position: fixed;         /* siempre visible */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:  #d19ada; /* color de fondo */
+    z-index: 1000;
+}
+
+.horizontal-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;          /* horizontal */
+    justify-content: right; /* centra los links */
+}
+
+.horizontal-menu ul li {
+    margin: 0 15px;
+}
+
+.horizontal-menu ul li a {
+    display: block;
+    padding: 15px 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.horizontal-menu ul li a:hover {
+    background-color: #9c27b0; /* efecto morado al pasar el mouse */
+    transform: scale(1.05);    /* efecto ligero de zoom */
+}
+
+/* Para que el contenido no quede detrás del menú */
+body {
+    padding-top: 60px; /* igual que la altura del menú */
+}
+
+
+/* =====================
+   HERO / PRESENTACIÓN
+===================== */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #d19ada 0%, #d19ada 75%, #f0f0f0 100%);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color:#f0f0f0;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: #555555;
+}
+
+.hero-img {
+    width: 200px;        /* tamaño más pequeño */
+    height: 200px;       /* mantiene proporción cuadrada */
+    object-fit: cover;   /* recorta para mantener la forma */
+    border-radius: 50%;  /* completamente redonda */
+    display: block;
+    margin: -100px auto 15px auto; /* sube la imagen  y centra horizontalmente */
+    border: 4px solid #9c27b0;   /* borde morado */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* sombra sutil */
+}
+
+.hero-text {
+    margin: 15px 0 25px 0;
+    font-size: 1rem;
+    color: #333;
+    max-width: 600px;
+    text-align: center;
+}
+
+.hero p.hero-text {
+    font-size: 1rem; /* tamaño menor que el p principal */
+    color: #333;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* espacio entre botones */
+    flex-wrap: wrap; /* se adaptan en móviles */
+}
+
+.hero-btn {
+    background-color: #9c27b0; /* morado */
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px; /* bordes redondeados */
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #d19ada; /* más claro al pasar el mouse */
+    transform: scale(1.05); /* efecto ligero de zoom */
+}
+
+
+/* =====================
+   SECCIONES
+===================== */
+section {
+    padding: 6rem 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #eee;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+
+/* Contenedor de dos columnas */
+.two-columns {
+    display: flex;
+    flex-wrap: wrap; /* se adapta en móviles */
+    gap: 40px;       /* espacio entre columnas */
+    justify-content: center; /* centrado horizontal */
+    margin: 2rem 0;
+}
+
+/* Cada columna */
+.two-columns .column {
+    flex: 1 1 400px; /* crece, se encoge, mínimo 400px */
+    background-color: #f8f0fb; /* color suave para diferenciar */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.two-columns h3 {
+    color: #9c27b0;
+    margin-bottom: 15px;
+}
+
+/* Cada elemento de la lista como tarjeta */
+.two-columns ul li {
+    background-color: #ffffff;        /* fondo blanco */
+    border-left: 4px solid #9c27b0;  /* barra morada a la izquierda */
+    padding: 15px 20px;               /* espacio interno */
+    margin-bottom: 20px;              /* espacio entre li */
+    border-radius: 8px;               /* bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.two-columns ul li:hover {
+    transform: translateY(-5px);  /* ligera elevación */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Opcional: destacar títulos y años dentro de cada li */
+.two-columns ul li strong {
+    color: #9c27b0;
+    font-size: 1.05rem;
+}
+
+.two-columns ul li span {
+    font-size: 0.9rem;
+    color: #777;
+    margin-right: 10px;
+}
+
+.two-columns ul li p {
+    margin-top: 5px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+
+
+/* Habilidades blandas bonitas */
+.soft-skills {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* espacio entre habilidades */
+    padding: 0;
+    justify-content: center;
+}
+
+.soft-skills li {
+    background-color: #f0e0f5; /* color de fondo suave */
+    color: #9c27b0;           /* morado de la web */
+    padding: 8px 15px;
+    border-radius: 20px;       /* redondeado estilo “pill” */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;                  /* espacio entre emoji y texto */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* sombra ligera */
+    transition: transform 0.2s;
+}
+
+.soft-skills li:hover {
+    transform: scale(1.05); /* efecto ligero al pasar el ratón */
+    background-color: #e0c0f0; /* cambio suave de color al hover */
+}
+
+
+/* =====================
+   ARTÍCULOS / BLOQUES
+===================== */
+section article {
+    margin-bottom: 2rem;
+}
+
+section article h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+section article ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section article ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* =====================
+   GRID DE HABILIDADES
+===================== */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.skills-grid article {
+    border: 1px solid #eee;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-grid article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* BARRAS POR PÁRRAFO */
+.skills-grid article p {
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 5px 0;
+}
+
+.skills-grid article p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    height: 10px;
+    width: 0;
+    background-color: #1e90ff;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+
+
+/* =====================
+   COLABOREMOS
+===================== */
+#colaboremos p {
+    margin-bottom: 1rem;
+}
+
+/* =====================
+   CONTACTO
+===================== */
+#contacto p {
+    margin-bottom: 0.5rem;
+}
+
+/* =====================
+   PIE DE PÁGINA
+===================== */
+footer {
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 4rem 1rem;
+    }
+}
+
+
+
+
+/* Cada skill como flex */
+.skills-grid article p {
+    display: flex;
+    justify-content: space-between; /* Skill a la izquierda, porcentaje a la derecha */
+    align-items: center; /* Alinea verticalmente */
+    position: relative;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 15px; /* espacio para la barra */
+}
+
+/* Barra de fondo */
+.skills-grid article p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+/* Barra llena */
+.skill-fill {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    background-color: #d19ada;
+    border-radius: 5px;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Texto del porcentaje */
+.skill-percent {
+    position: static; /* ya no absoluto, está en el flex */
+    font-size: 0.9rem;
+    color: #333;
+}
